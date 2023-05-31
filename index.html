@@ -37,11 +37,9 @@
   </div>
   <script>
     const apiKey="427f828fb5b6e6c4cdc430515ef7f749";
-    const apiUrl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=bangalore";
-
-
+    const apiUrl="https://api.openweathermap.org/data/2.5/weather?q=goa&units=metric";
     async function checkWeather(){
-      const response = await fetch(apiUrl + `&appid=$(apiKey)`);
+      const response = await fetch(`${apiUrl}&appid=${apiKey}`);
       
       var data = await response.json();
       console.log(data);
@@ -49,8 +47,8 @@
     
     }
 
-    checkWeather();
-    
+  
+  checkWeather();  
   </script>
 
 </body>
